@@ -30,11 +30,6 @@ int main() {
   int fib1 = 1;
   int fib2 = 1;
 
-  // We need someplace to store the sum of fib1 and fib2 temporarily in each
-  // iteration.
-
-  int next = 0;
-
   while ( fib2 < 4000000 ) {
     // Output the current Fibonacci number.
     cout << fib2 << endl;
@@ -43,7 +38,7 @@ int main() {
     if ( fib2 % 2 == 0 ) { sum += fib2; }
 
     // Calculate the next set of numbers.
-    next = fib1 + fib2;
+    int next = fib1 + fib2;
     fib1 = fib2;
     fib2 = next;
   }
